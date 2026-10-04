@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Digital Literacy for Senior Citizens</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f0f8ff;
+text-align:center;
+padding:20px;
+}
+
+h1{
+color:#0066cc;
+}
+
+button{
+padding:10px 20px;
+margin:5px;
+font-size:16px;
+border:none;
+border-radius:8px;
+background:#4CAF50;
+color:white;
+cursor:pointer;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:20px auto;
+max-width:700px;
+border-radius:10px;
+box-shadow:0 0 10px #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="title">Digital Literacy for Senior Citizens</h1>
+
+<button onclick="english()">English</button>
+<button onclick="hindi()">हिंदी</button>
+<button onclick="marathi()">मराठी</button>
+
+<button onclick="speak()">🎤 Voice Assistant</button>
+
+<div class="card">
+<h2 id="heading">Welcome</h2>
+<p id="content">
+Learn WhatsApp, Online Payments and Video Calling safely.
+</p>
+</div>
+
+<script>
+
+let voiceText =
+"Welcome to Digital Literacy for Senior Citizens";
+
+let voiceLang = "en-US";
+
+function speak(){
+let msg = new SpeechSynthesisUtterance(voiceText);
+msg.lang = voiceLang;
+speechSynthesis.speak(msg);
+}
+
+function english(){
+
+document.getElementById("title").innerHTML =
+"Digital Literacy for Senior Citizens";
+
+document.getElementById("heading").innerHTML =
+"Welcome";
+
+document.getElementById("content").innerHTML =
+"Learn WhatsApp, Online Payments and Video Calling safely.";
+
+voiceText =
+"Welcome to Digital Literacy for Senior Citizens";
+
+voiceLang = "en-US";
+}
+
+function hindi(){
+
+document.getElementById("title").innerHTML =
+"वरिष्ठ नागरिकों के लिए डिजिटल साक्षरता";
+
+document.getElementById("heading").innerHTML =
+"स्वागत है";
+
+document.getElementById("content").innerHTML =
+"व्हाट्सएप, ऑनलाइन भुगतान और वीडियो कॉलिंग सीखें।";
+
+voiceText =
+"वरिष्ठ नागरिकों के लिए डिजिटल साक्षरता में आपका स्वागत है";
+
+voiceLang = "hi-IN";
+}
+
+function marathi(){
+
+document.getElementById("title").innerHTML =
+"ज्येष्ठ नागरिकांसाठी डिजिटल साक्षरता";
+
+document.getElementById("heading").innerHTML =
+"स्वागत आहे";
+
+document.getElementById("content").innerHTML =
+"व्हॉट्सअॅप, ऑनलाइन पेमेंट आणि व्हिडिओ कॉलिंग शिका.";
+
+voiceText =
+"ज्येष्ठ नागरिकांसाठी डिजिटल साक्षरता मध्ये आपले स्वागत आहे";
+
+voiceLang = "mr-IN";
+}
+
+</script>
+
+</body>
+</html>
